@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { timelineItem } from '../timeline/timeline.component';
+
 
 @Component({
   selector: 'app-header',
@@ -7,12 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  name='';
-  profession='';
-
+  name: string = 'Alejandro Fabra Segarra';
+  profession: string = 'FullStack Developer';
+  telf: string = '677482553';
+  email: string = 'alfaseart@gmail.com';
+  IsContactDataOpened:boolean=false;
+  contactData:string[]=[this.telf,this.email];
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openContactData(){
+    this.IsContactDataOpened=!this.IsContactDataOpened;
   }
 
 }

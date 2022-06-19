@@ -1,0 +1,34 @@
+<div class="container-flex m-2">
+    <div class="row m-0 p-0">
+        <div class=" col-lg-6 col-md-6 col-sm-12 pe-1 ps-0 ">
+            <mat-card class="cardBackGround">
+                <b class="me-2">Estudis</b>
+                <i class="fas fa-solid fa-graduation-cap"></i>
+                <app-timeline [items]="studies" [pointColor]="timelinePointColor"></app-timeline>
+            </mat-card>
+            <mat-card class="cardBackGround">
+                
+            </mat-card>
+        </div>
+        <div class=" col-lg-6 col-md-6 col-sm-12 ps-1 pe-0">
+            <mat-card class="cardBackGround">
+             
+                    <b class="me-2">Treballs</b>
+                    <i class="fas fa-solid fa-briefcase"></i>
+         
+                <div class="row mt-2">
+                    <div class="col">
+                        <button class="btn btn-light button" (click)="UnfilterWork()">Mostrar tot</button>
+                    </div>
+                  <div class="col">
+                    <button class="btn btn-light button" (click)="FilterWorkBySoftware()">Filtrar per treballs informàtics
+                        <i class="fas fa-solid fa-laptop-code ms-2"></i>
+                    </button>
+                  </div>
+                    
+                </div>
+                <app-timeline [items]="worksView" [pointColor]="timelinePointColor"></app-timeline>
+            </mat-card>
+        </div>
+    </div>
+</div>

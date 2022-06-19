@@ -2,10 +2,3 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.homeBackground {
-    background-color: #ffaa80;
-}
-.headerBackground {
-    background-color: #ff9966;
-}

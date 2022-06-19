@@ -5,8 +5,6 @@ import { Injectable } from '@angular/core';
 const auth: AuthResponse = { ok: true, id: 1, name: 'Alejandro Fabra', token: 123456, msg: 'benvingut' };
 const alterEgoAuth: AuthResponse = { ok: true, id: 1, name: 'Alejandrovi Dividibidi', token: 654321, msg: 'benvingut' };
 
-
-
 @Injectable()
 export class AuthSimulatorInterceptor implements HttpInterceptor {
 

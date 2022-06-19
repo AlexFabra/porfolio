@@ -1,0 +1,12 @@
+<div *ngIf="hideOption">
+    <button type="button" class="btn  btn-light" (click)="showAllSelected()">
+        {{mostrarOcultar}} les dates
+    </button>
+</div>
+<div *ngIf="isShowAllSelected">
+    <div class="dateViewer wrapper scrollableContainer">
+        <div *ngFor="let date of _dataToShow" class="cellBackground">
+            {{date}}
+        </div>
+    </div>
+</div>

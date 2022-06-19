@@ -1,0 +1,23 @@
+<div class="timeline noselect">
+    <div *ngFor="let item of items;index as i" class="timeline-event">
+        <div class="timeline-point-track-container">
+            <div class="timeline-point" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#'+item.id"></div>
+            <div *ngIf="item!=items[items.length-1]" class="timeline-track"></div>
+        </div>
+        <div class="timeline-content customAccordion" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#'+item.id">
+            <div class="card">
+            <b>{{item.title}}</b>
+            <div [id]="item.id" class="collapse">
+                    <div class="accordion-body p-0 mt-1">
+                        <div>{{item.description}}</div>
+                        <div>{{item.location}}</div>
+                        <div>{{item.date}}</div>
+                    </div>
+            </div>
+        <div>
+        </div>
+        
+    </div>
+</div>

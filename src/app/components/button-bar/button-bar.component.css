@@ -1,0 +1,11 @@
+.buttonBarBackground {
+    background-color: #ffcbb1;
+}
+.ah-button-active {
+    background-color: rgb(255, 131, 106);
+    border-color:rgb(255, 131, 106);
+}
+.button:hover{
+    background-color: rgb(255, 104, 77);
+    border-color: rgb(255, 104, 77);
+}
