@@ -27,3 +27,9 @@
 .translate1y{
     transform:translate(0px,-1px)
 }
+
+.card{
+    max-width:fit-content; 
+    width: fit-content;
+    min-width: 13em;
+}

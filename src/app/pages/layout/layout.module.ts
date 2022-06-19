@@ -7,13 +7,15 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { ButtonBarComponent } from '../../components/button-bar/button-bar.component';
 import { RouterModule } from '@angular/router';
 import { DataViewerComponent } from '../../components/data-viewer/data-viewer.component';
+import { ContactComponent } from 'src/app/components/contact/contact.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     HeaderComponent,
     ButtonBarComponent,
-    DataViewerComponent
+    DataViewerComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

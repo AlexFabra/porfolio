@@ -1,53 +1,15 @@
 <div class="container-flex noSelect">
     <mat-card class="headerBackground m-2">
-
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <mat-card class="overHeaderBackground">
-                    <div class="customAccordion" data-bs-toggle="collapse" data-bs-target="#collapseSelected" (click)="openContactData()">
-                        <div class="row mt-2">
-                            <div class="col-2">
-                                <i class="fas fa-solid fa-address-card"></i>
-                            </div>
-
-                            <div class="col-8" style="text-align:center;" >
-                                Dades de contacte
-                            </div>
-
-                            <div class="col-2" *ngIf="IsContactDataOpened">
-                                <i class="fas fa-solid fa-caret-down"></i>
-                            </div>
-
-                            <div class="col-2" *ngIf="!IsContactDataOpened">
-                                <i class="fas fa-solid fa-caret-up"></i>
-                            </div>
-
-                        </div>
-
-                        <div id="collapseSelected" class="collapse">
-                            <div class="accordion-body p-0 mt-1">
-                                <app-data-viewer [dataToShow]="contactData" [columnNumber]="1"></app-data-viewer>
-                            </div>
-                        </div>
-                    </div>
-                </mat-card>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="row m-0 p-0 justify-content-center">
                     <div class="col-12 m-2" style="max-width:fit-content">
                         <img src="./assets/img/perfilcurriculum.png">
                     </div>
                 </div>
                 <div class="row m-0 p-0 justify-content-center mb-3">
-                    <mat-card class="col-5" style="max-width:fit-content; min-width: 15em;">
+                    <mat-card class="col-5 card">
                         <h4 style="text-align:center">{{name}}</h4>
                         <h5 style="text-align:center">{{profession}}</h5>
                     </mat-card>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-               
-            </div>
-        </div>
     </mat-card>
 </div>

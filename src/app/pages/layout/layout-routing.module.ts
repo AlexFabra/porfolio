@@ -6,6 +6,7 @@ const routes: Routes = [{
   path: '', component: LayoutComponent,
   children: [
     { path: 'training', loadChildren: () => import('../training/training.module').then(m => m.TrainingModule) },
+    { path: 'projects', loadChildren: () => import('../projects/projects.module').then(m=>m.ProjectsModule)},
     { path: '', redirectTo: 'training', pathMatch: 'full' }
   ]
 }];
