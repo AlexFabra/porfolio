@@ -5,13 +5,15 @@ import { TimelineComponent } from 'src/app/components/timeline/timeline.componen
 import { TrainingComponent } from './training.component';
 import { TrainingRoutingModule } from './training.routing.module';
 import { MonthHistoryComponent } from 'src/app/components/month-history/month-history.component';
+import { ImgCarrouselComponent } from 'src/app/components/img-carrousel/img-carrousel.component';
 
 
 @NgModule({
   declarations: [
     TrainingComponent,
     TimelineComponent,
-    MonthHistoryComponent
+    MonthHistoryComponent,
+    ImgCarrouselComponent
   ],
   imports: [
     CommonModule,

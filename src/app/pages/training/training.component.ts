@@ -23,6 +23,8 @@ export class TrainingComponent implements OnInit {
     { id: 'workInfo6', title: 'Front-end developer en Nexus Geographics', description: 'Pràctiques del cicle DAM', date: `De l'octubre de 2021 a juliol de 2022` }
   ]
 
+  certificates:string[] = ['./assets/img/angularcert.jpg','./assets/img/reactcert.jpg']
+
   worksView!: timelineItem[];
 
   timelinePointColor = 'white';
