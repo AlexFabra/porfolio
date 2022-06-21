@@ -6,6 +6,10 @@ import { TrainingComponent } from './training.component';
 import { TrainingRoutingModule } from './training.routing.module';
 import { MonthHistoryComponent } from 'src/app/components/month-history/month-history.component';
 import { ImgCarrouselComponent } from 'src/app/components/img-carrousel/img-carrousel.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import { EchartsxModule } from 'echarts-for-angular';
+import { DonutChartComponent } from 'src/app/components/charts/donut/donut-chart.component';
+import { BarChartComponent } from 'src/app/components/charts/bars/bar-chart/bar-chart.component';
 
 
 @NgModule({
@@ -13,12 +17,16 @@ import { ImgCarrouselComponent } from 'src/app/components/img-carrousel/img-carr
     TrainingComponent,
     TimelineComponent,
     MonthHistoryComponent,
-    ImgCarrouselComponent
+    ImgCarrouselComponent,
+    DonutChartComponent,
+    BarChartComponent
   ],
   imports: [
     CommonModule,
     MatCardModule,
-    TrainingRoutingModule
+    TrainingRoutingModule,
+    MatBadgeModule,
+    EchartsxModule
   ]
 })
 export class TrainingModule { }

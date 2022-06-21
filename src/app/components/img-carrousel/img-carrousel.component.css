@@ -1,0 +1,17 @@
+.img {
+    max-width: 27em;
+    max-height: 17em;
+}
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.littleImg{
+    max-width: 10em;
+    max-height: 6em;
+}
+.button-checked{
+    background-color: bisque !important;
+}

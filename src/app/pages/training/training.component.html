@@ -9,6 +9,9 @@
             <mat-card class="cardBackGround mt-2">
                 <app-img-carrousel [imgs]="certificates"></app-img-carrousel>
             </mat-card>
+            <mat-card class="cardBackGround mt-2">
+                <app-donut-chart [data]="codeLanguages"></app-donut-chart>
+            </mat-card>
         </div>
 
         <div class=" col-lg-6 col-md-6 col-sm-12 ps-1 pe-0">
@@ -30,6 +33,10 @@
 
                 </div>
                 <app-timeline [items]="worksView" [pointColor]="timelinePointColor"></app-timeline>
+            </mat-card>
+
+            <mat-card class="cardBackGround mt-2">
+                <app-bar-chart [data]="frameworksAndLibraries"></app-bar-chart>
             </mat-card>
         </div>
     </div>

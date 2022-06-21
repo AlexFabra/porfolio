@@ -8,10 +8,22 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImgCarrouselComponent implements OnInit {
 
   @Input() imgs: string[]=[];
+  documentSelection:boolean = false;
+  imgSelector:boolean=false;
+  selection:number=1;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+  }
+
+  openImgSelector() {
+    this.documentSelection = !this.documentSelection;
+  }
+
+  changeSelection(index:number){
+    this.selection=index;
+    this.documentSelection = !this.documentSelection;
   }
 
 }
