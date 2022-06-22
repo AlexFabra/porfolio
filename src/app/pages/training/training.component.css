@@ -5,6 +5,11 @@
     width: 100%;
 }
 .button:hover{
-    background-color: rgb(255, 104, 77);
-    border-color: rgb(255, 104, 77);
+    background-color: #7c1010;
+    border-color:#7c1010;
+    color:white;
+}
+.icon{
+    max-width: 30px;
+    max-height: 30px;
 }

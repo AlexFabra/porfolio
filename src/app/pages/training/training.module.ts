@@ -10,6 +10,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { EchartsxModule } from 'echarts-for-angular';
 import { DonutChartComponent } from 'src/app/components/charts/donut/donut-chart.component';
 import { BarChartComponent } from 'src/app/components/charts/bars/bar-chart/bar-chart.component';
+import { ModalImgComponent } from 'src/app/components/modal-img/modal-img.component';
+import { ModalModule } from 'ngb-modal';
 
 
 @NgModule({
@@ -19,14 +21,17 @@ import { BarChartComponent } from 'src/app/components/charts/bars/bar-chart/bar-
     MonthHistoryComponent,
     ImgCarrouselComponent,
     DonutChartComponent,
-    BarChartComponent
+    BarChartComponent,
+    ModalImgComponent,
+    
   ],
   imports: [
     CommonModule,
     MatCardModule,
     TrainingRoutingModule,
     MatBadgeModule,
-    EchartsxModule
+    EchartsxModule,
+    ModalModule
   ]
 })
 export class TrainingModule { }

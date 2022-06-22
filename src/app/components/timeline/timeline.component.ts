@@ -32,7 +32,6 @@ export class TimelineComponent implements AfterViewInit, OnChanges {
       if (changes.hasOwnProperty(propName)) {
         switch (propName) {
           case 'items':
-            console.log('ep')
             this.setPointColor();
             break;
           case 'pointColor':
@@ -49,7 +48,6 @@ export class TimelineComponent implements AfterViewInit, OnChanges {
     setTimeout(() => {
       let elements = document.getElementsByClassName('timeline-point');
       for (var i = 0; i < elements.length; i++) {
-        console.log(elements[i])
         elements[i].setAttribute('style', `background-color:${this.pointColor}`)
       }
     }, 5)

@@ -23,11 +23,16 @@ export class TrainingComponent implements OnInit {
     { id: 'workInfo6', title: 'Front-end developer en Nexus Geographics', description: 'Pràctiques del cicle DAM', date: `De l'octubre de 2021 a juliol de 2022` }
   ]
 
-  frameworksAndLibraries=[{ name: 'Angular', value: 70 }, { name: 'React', value: 50 }, { name: 'Node', value: 20 }, { name: 'Hibernate', value: 10}];
+  frameworksAndLibrariesTitle:string='Experiència amb frameworks i llibreries'
+  frameworksAndLibraries=[{ name: 'Angular', value: 70 }, { name: 'React', value: 50 }, { name: 'Node', value: 20 }, { name: 'Hibernate', value: 10},{name:'Bootstrap', value:50}, {name:'ionic',value:30}];
 
+  codeLanguagesTitle:string='Familiaritat amb llenguatges de programació';
   codeLanguages=[{name:'Javascript',value:80}, {name:'Java', value:80},{name:'Python',value:20},{name:'Php',value:5},{name:'Sql',value:40}];
+
+  githubIcon='./assets/img/github.png';
+  urlGitHub='https://github.com/AlexFabra?tab=repositories';
   
-  certificates:string[] = ['./assets/img/angularcert.jpg','./assets/img/reactcert.jpg']
+  certificates:string[] = ['./assets/img/angularcert.jpg','./assets/img/reactcert.jpg','/assets/img/filosofiacert.jpg']
 
   worksView!: timelineItem[];
 

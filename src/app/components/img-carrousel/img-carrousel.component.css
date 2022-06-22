@@ -15,3 +15,12 @@
 .button-checked{
     background-color: bisque !important;
 }
+
+.button:hover{
+    background-color: #7c1010;
+    border-color:#7c1010;
+    color:white;
+}
+.buttonSecondary:hover{
+    background-color: #f9dd7f;
+}

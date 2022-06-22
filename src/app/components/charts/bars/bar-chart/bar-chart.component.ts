@@ -12,7 +12,8 @@ export class BarChartComponent implements OnInit {
 
   readonly echartsExtentions: any[];
   option: EChartsOption = {};
-  charWidth:number=0;
+  charWidth:string='';
+  @Input() title: string = '';
   @Input() data: object[] = [];
   
   constructor() {
@@ -28,7 +29,7 @@ export class BarChartComponent implements OnInit {
 
   ngOnInit(): void {
     this.createChart();
-    this.charWidth=this.data.length*70;
+    this.charWidth=(this.data.length*70).toString()+'px';
   }
 
 /** crea una gràfica tipus donut amb la informació que rep dels tags.

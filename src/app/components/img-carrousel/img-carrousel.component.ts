@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ModalImgComponent } from '../modal-img/modal-img.component';
 
 @Component({
   selector: 'app-img-carrousel',
@@ -12,6 +13,8 @@ export class ImgCarrouselComponent implements OnInit {
   imgSelector:boolean=false;
   selection:number=1;
 
+  @ViewChild('modalImg') private modalImg: ModalImgComponent | undefined;
+
   constructor() { }
 
   ngOnInit(): void {    
@@ -24,6 +27,10 @@ export class ImgCarrouselComponent implements OnInit {
   changeSelection(index:number){
     this.selection=index;
     this.documentSelection = !this.documentSelection;
+  }
+
+  openModalImg(){
+    return this.modalImg!.open();
   }
 
 }

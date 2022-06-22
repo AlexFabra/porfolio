@@ -1,4 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.backgroundPrimary {
+    background-color: #993232;
+    /* #393939 */
+    /* #D8D8D8; */
+}
+
+.backgroundSecondary {
+    background-color: #29A1DB
+}
+
+.backgroundTertiary {
+    background-color: #DB2948;
+}
+
+.colorFirst {
+    background-color: #DAF7A6;
+}
+
+.colorSecond {
+    background-color: #FFC300;
+}
+
+.colorThird {
+    background-color: #FF5733;
+}
+
+.colorFourth {
+    background-color: #C70039;
+}
+
+.colorFifth {
+    background-color: #900C3F;
+}
+
+.colorSixth {
+    background-color: #581845;
+}
+
+.cardBackground {
+    background-color: #ffeeb7;
+    /* #ffd153; */
+    /* #ffb48e; */
+}
+
+.cardBackgroundSecondary {
+    background-color: #f9dd7f;
+    /* #DAF7A6; */
+}

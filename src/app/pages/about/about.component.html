@@ -1,0 +1,36 @@
+<mat-card class="cardBackgroundSecondary m-2">
+    <div class="mb-2">
+        <b>Valors</b>
+    </div>
+    <div>
+        El meu interès és treballar en projectes que pretenguin canviar de manera positiva la societat. <br>
+        Amb la intenció de participar en canvis polítics i ecològics a llarg termini mitjançant la programació.
+    </div>
+</mat-card>
+
+<mat-card class="cardBackgroundSecondary m-2">
+    <div class="mb-2">
+        <b>Idiomes</b>
+        <i class="fas fa-solid fa-language ms-2"></i>
+    </div>
+
+    <div *ngFor="let language of languages">
+
+        <img src={{language.img}} class="iconFlag me-2" alt="...">
+
+        {{language.name}}
+
+        nivell: {{language.level}}
+
+    </div>
+</mat-card>
+
+<mat-card class="cardBackgroundSecondary m-2">
+    <div class="mb-2">
+        <b>Informació personal</b>
+        <i class="fas fa-solid fa-id-card ms-2"></i>
+    </div>
+    <div>Any de naixement: 1997</div>
+    <div>Localització: Banyoles/Girona (des-de fa més de 10 anys)</div>
+    <div>Natal de: Elx/Alacant</div>
+</mat-card>

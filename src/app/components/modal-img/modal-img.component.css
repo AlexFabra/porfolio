@@ -1,0 +1,9 @@
+.img{
+    max-width: 750px;
+    max-height: 500px;
+}
+.imgContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

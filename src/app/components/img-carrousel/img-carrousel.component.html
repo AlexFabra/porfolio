@@ -1,21 +1,25 @@
 <div class="container">
   <div class="row">
-    <!--  [ngClass]="'!documentSelection' ? 'button-checked':''" -->
-    <button mat-raised-button matBadge="{{imgs.length}}" [matBadgeHidden]="documentSelection" class="btn btn-light"
+    <button mat-raised-button matBadge="{{imgs.length}}" [matBadgeHidden]="documentSelection" class="btn btn-light button"
       (click)="openImgSelector()">
-      <span>Altres documents</span>
+      <span *ngIf="!documentSelection">Altres documents</span>
+      <span *ngIf="documentSelection">Tornar</span>
     </button>
   </div>
   <div class="row">
     <div class="col" *ngIf="documentSelection; else showImg">
-      <button *ngFor="let img of imgs; let i = index" class="btn btn-light m-2" (click)="changeSelection(i)">
+      <button *ngFor="let img of imgs; let i = index" class="btn btn-light m-2 buttonSecondary" (click)="changeSelection(i)">
         <img src={{img}} class="d-block w-100 littleImg p-2" alt="...">
       </button>
     </div>
     <ng-template #showImg >
       <div class="img-container m-2">
-        <img src={{imgs[selection]}} class="img" alt="...">
+        <button class="btn btn-light button" type="button" (click)="openModalImg()">
+          <img src={{imgs[selection]}} class="img" alt="...">
+        </button>
       </div>
     </ng-template>
   </div>
 </div>
+
+<app-modal-img #modalImg [img]="imgs[selection]" class="customModalClass"></app-modal-img>
