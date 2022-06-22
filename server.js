@@ -1,14 +1,17 @@
 const path = require('path');
 const express = require('express');
+
 const app = express();
 require('dotenv').config();
 
 // Serve static files
-app.use(express.static('/dist/AlejandroFabraPortfolio'));
+app.use(express.static('dist/AlejandroFabraPortfolio'));
+
+app.use(express.json());
 
 // Send all requests to index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join( __dirname,'/dist/AlejandroFabraPortfolio/index.html'));
+  res.sendFile(path.join( __dirname,'dist/AlejandroFabraPortfolio/index.html'));
 });
 
 app.listen(process.env.PORT, ()=>{
