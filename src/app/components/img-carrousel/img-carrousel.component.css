@@ -1,21 +1,20 @@
 .img {
-    max-width: 27em;
-    max-height: 17em;
-}
-.img-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 80%; 
+    width: 80%; 
+    object-fit:contain;
 }
 
 .littleImg{
     max-width: 10em;
     max-height: 6em;
 }
+
+.button {
+    display:inline-block;
+}
 .button-checked{
     background-color: bisque !important;
 }
-
 .button:hover{
     background-color: #7c1010;
     border-color:#7c1010;

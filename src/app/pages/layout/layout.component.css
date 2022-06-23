@@ -1,3 +1,5 @@
-.cardBackGround {
-    background-color: #f68349;
+.layout{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
