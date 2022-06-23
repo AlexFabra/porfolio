@@ -29,10 +29,10 @@ export class TrainingComponent implements OnInit {
   codeLanguagesTitle:string='Familiaritat amb llenguatges de programació';
   codeLanguages=[{name:'Javascript',value:80}, {name:'Java', value:80},{name:'Python',value:20},{name:'Php',value:5},{name:'Sql',value:40}];
 
-  githubIcon='./assets/img/github.png';
+  githubIcon='https://res.cloudinary.com/dlmdj7zsu/image/upload/v1655978043/github_fmsq6s.png';
   urlGitHub='https://github.com/AlexFabra?tab=repositories';
   
-  certificates:string[] = ['./assets/img/angularcert.jpg','./assets/img/reactcert.jpg','/assets/img/filosofiacert.jpg']
+  certificates:string[] = ['https://res.cloudinary.com/dlmdj7zsu/image/upload/v1655978054/angular_cert_icc07r.jpg','https://res.cloudinary.com/dlmdj7zsu/image/upload/v1655978057/certificado_React_img_dqsy2x.jpg','https://res.cloudinary.com/dlmdj7zsu/image/upload/v1655978048/filosofiacert_crjdmy.jpg']
 
   worksView!: timelineItem[];
 
