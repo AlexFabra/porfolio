@@ -16,38 +16,6 @@ body {
     /* #D8D8D8; */
 }
 
-.backgroundSecondary {
-    background-color: #29A1DB
-}
-
-.backgroundTertiary {
-    background-color: #DB2948;
-}
-
-.colorFirst {
-    background-color: #DAF7A6;
-}
-
-.colorSecond {
-    background-color: #FFC300;
-}
-
-.colorThird {
-    background-color: #FF5733;
-}
-
-.colorFourth {
-    background-color: #C70039;
-}
-
-.colorFifth {
-    background-color: #900C3F;
-}
-
-.colorSixth {
-    background-color: #581845;
-}
-
 .cardBackground {
     background-color: #ffeeb7;
     /* #ffd153; */
