@@ -24,7 +24,7 @@ export class TrainingComponent implements OnInit {
   ]
 
   frameworksAndLibrariesTitle:string='Experiència amb frameworks i llibreries'
-  frameworksAndLibraries=[{ name: 'Angular', value: 70 }, { name: 'React', value: 50 }, { name: 'Node', value: 20 }, { name: 'Hibernate', value: 10},{name:'Bootstrap', value:50}, {name:'ionic',value:30}];
+  frameworksAndLibraries=[{ name: 'Angular', value: 70 }, { name: 'React', value: 50 }, { name: 'Node', value: 30 }, { name: 'Hibernate', value: 10},{name:'Bootstrap', value:50}, {name:'ionic',value:30}, {name:'firebase',value:10}];
 
   codeLanguagesTitle:string='Familiaritat amb llenguatges de programació';
   codeLanguages=[{name:'Javascript',value:80}, {name:'Java', value:80},{name:'Python',value:20},{name:'Php',value:5},{name:'Sql',value:40}];
