@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl:'https://alejandro-fabra-portfolio.herokuapp.com'
+  baseUrl:'https://alejandro-fabra-portfolio.herokuapp.com/portfolio'
 };
