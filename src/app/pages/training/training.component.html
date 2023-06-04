@@ -2,7 +2,7 @@
     <div class="row m-0 p-0">
         <div class=" col-lg-6 col-md-6 col-sm-12 p-0 m-0">
             <mat-card class="cardBackgroundSecondary m-2">
-                <b class="me-2">Estudis</b>
+                <b class="me-2">Academic training</b>
                 <i class="fas fa-solid fa-graduation-cap"></i>
                 <app-timeline [items]="studies" [pointColor]="timelinePointColor"></app-timeline>
             </mat-card>
@@ -16,10 +16,10 @@
 
         <div class=" col-lg-6 col-md-6 col-sm-12 p-0">
             <mat-card class="cardBackgroundSecondary m-2">
-                <b class="me-2">Treballs</b>
+                <b class="me-2">Works</b>
                 <i class="fas fa-solid fa-briefcase"></i>
 
-                <div class="row mt-2">
+                <!-- <div class="row mt-2">
                     <div class="col">
                         <button class="btn btn-light button" (click)="UnfilterWork()">Mostrar tot</button>
                     </div>
@@ -29,7 +29,7 @@
                             <i class="fas fa-solid fa-laptop-code ms-2"></i>
                         </button>
                     </div>
-                </div>
+                </div> -->
                 <app-timeline [items]="worksView" [pointColor]="timelinePointColor"></app-timeline>
             </mat-card>
 
@@ -37,7 +37,7 @@
                 <app-bar-chart [title]="frameworksAndLibrariesTitle" [data]="frameworksAndLibraries"></app-bar-chart>
             </mat-card>
             <mat-card class="cardBackgroundSecondary m-2">
-                <a [href]="urlGitHub">Projectes a GitHub</a>
+                <a [href]="urlGitHub">GitHub projects</a>
                 <img [src]="githubIcon" class="icon ms-2">
             </mat-card>
         </div>
