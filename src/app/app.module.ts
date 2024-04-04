@@ -7,6 +7,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ModalImgComponent } from './components/modal-img/modal-img.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
+import { MapComponent } from './components/map/map.component';
 // import { TranslateLoader, TranslateModule} from "@ngx-translate/core";
 // import {TranslateHttpLoader} from "@ngx-translate/http-loader"
 
@@ -16,7 +17,8 @@ import { HttpClientModule,HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
