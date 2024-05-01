@@ -1,0 +1,19 @@
+<ng-template #modal let-modal>
+    <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">{{name}}</h4>
+            <button type="button" class="btn  btn-light" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">
+                            <i class="fas fa-times"></i>
+                    </span>
+            </button>
+    </div>
+
+    <div class="modal-body imgContainer">
+        <img src={{img}} alt="..." class="img">
+    </div>
+
+    <div class="modal-footer">
+           
+    </div>
+
+</ng-template>

@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+html,
+body {
+    display:flex;
+    flex-direction: column;
+    background-color: #ace9a0;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.backgroundPrimary {
+    background-color: #93b984 !important;
+    /* #393939 */
+    /* #D8D8D8; */
+}
+
+.cardBackground {
+    background-color: #ffeeb7 !important;
+    /* #ffd153; */
+    /* #ffb48e; */
+}
+
+.cardBackgroundSecondary {
+    background-color: #c6f3b0 !important;
+    /* #DAF7A6; */
+}
+
+.ah-button-active {
+    background-color: #6baa38;
+    border-color:#3a7c3d;
+    color:white;
+}
+.button:hover{
+    background-color: #5da342;
+    border-color:#62a839;
+    color:white;
+}
+
+.dateViewer {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #aeddae;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.cellBackground {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 25px;
+}
+
+.scrollableContainer {
+    overflow: auto; 
+    max-height: 150px;
+}

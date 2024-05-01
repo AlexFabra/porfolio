@@ -1,0 +1,25 @@
+.img {
+    height: 80%; 
+    width: 80%; 
+    object-fit:contain;
+}
+
+.littleImg{
+    max-width: 10em;
+    max-height: 6em;
+}
+
+.button {
+    display:inline-block;
+}
+.button-checked{
+    background-color: bisque !important;
+}
+.button:hover{
+    background-color: #6baa38;
+    border-color:#5b912e;
+    color:white;
+}
+.buttonSecondary:hover{
+    background-color: #f9dd7f;
+}

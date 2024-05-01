@@ -1,0 +1,44 @@
+<div class="container-flex">
+    <div class="row m-0 p-0">
+        <div class=" col-lg-6 col-md-6 col-sm-12 p-0 m-0">
+            <mat-card class="cardBackgroundSecondary m-2 p-2">
+                <div class="mb-2">
+                    <b>Values</b>
+                </div>
+                <div>
+                    My interest is to work on projects that aim to change society in a positive way. <br>
+                    With the intention of participating in long-term political and ecological changes through the
+                    programming
+                </div>
+            </mat-card>
+            <mat-card class="cardBackgroundSecondary m-2 p-2">
+                <div class="mb-2">
+                    <b>Languages</b>
+                    <i class="fas fa-solid fa-language ms-2"></i>
+                </div>
+            
+                <div *ngFor="let language of languages">
+            
+                    <img src={{language.img}} class="iconFlag me-2" alt="...">
+            
+                    {{language.name}}
+            
+                    level: {{language.level}}
+            
+                </div>
+            </mat-card>
+        </div>
+        <div class=" col-lg-6 col-md-6 col-sm-12 p-0">
+                <mat-card class="cardBackgroundSecondary m-2 p-2">
+                    <div class="mb-2">
+                        <b>Personal information</b>
+                        <i class="fas fa-solid fa-id-card ms-2"></i>
+                    </div>
+                    <div>Year of birth: 1997</div>
+                    <div>Location: Banyoles/Girona </div>
+                    <!-- <div>Availability: full day</div>
+                    <div>B2 driving license and own vehicle</div> -->
+                </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.cardBackGround {
+    background-color: #f68349;
+}
+.button{
+    width: 100%;
+}
+.button:hover{
+    background-color: #7c1010;
+    border-color:#7c1010;
+    color:white;
+}
+.icon{
+    max-width: 30px;
+    max-height: 30px;
+}

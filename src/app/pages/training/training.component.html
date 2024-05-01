@@ -1,0 +1,46 @@
+<div class="container-flex">
+    <div class="row m-0 p-0">
+        <div class=" col-lg-6 col-md-6 col-sm-12 p-0 m-0">
+            <mat-card class="cardBackgroundSecondary m-2 p-2">
+                <b>Academic training <i class="fas fa-solid fa-graduation-cap ms-2"></i></b>
+                <app-timeline [items]="studies" [pointColor]="timelinePointColor"></app-timeline>
+            </mat-card>
+            <mat-card class="cardBackgroundSecondary mt-2 m-2 p-2">
+                <app-img-carrousel [imgs]="certificates"></app-img-carrousel>
+            </mat-card>
+            <mat-card class="cardBackgroundSecondary mt-2 m-2 p-2">
+                <app-donut-chart [data]="codeLanguages"></app-donut-chart>
+            </mat-card>
+        </div>
+
+        <div class=" col-lg-6 col-md-6 col-sm-12 p-0">
+            <mat-card class="cardBackgroundSecondary m-2 p-2">
+
+                <b>Works <i class="fas fa-solid fa-briefcase ms-2"></i></b>
+                <!-- <div class="row mt-2">
+                    <div class="col">
+                        <button class="btn btn-light button" (click)="UnfilterWork()">Mostrar tot</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-light button" (click)="FilterWorkBySoftware()">Filtrar per treballs
+                            informàtics
+                            <i class="fas fa-solid fa-laptop-code ms-2"></i>
+                        </button>
+                    </div>
+                </div> -->
+                <app-timeline [items]="worksView" [pointColor]="timelinePointColor"></app-timeline>
+            </mat-card>
+
+            <mat-card class="cardBackgroundSecondary m-2 p-2">
+                <b> {{frameworksAndLibrariesTitle}} <i class="fas fa-solid fa-code ms-2"></i></b>
+                <app-bar-chart [data]="frameworksAndLibraries"></app-bar-chart>
+            </mat-card>
+            <mat-card class="cardBackgroundSecondary m-2 p-2">
+                <div class="d-flex align-items-center justify-content-center">
+                    <a [href]="urlGitHub">GitHub projects</a>
+                    <img [src]="githubIcon" class="icon ms-2">
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

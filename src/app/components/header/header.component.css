@@ -1,0 +1,28 @@
+
+.legend {
+    border-radius: 50%;
+    height: 27px;
+    display: inline-block;
+    width: 27px;
+    text-align: center;
+    /* vertical-align: middle;
+    padding-top:2px; */
+    color: black;
+    transform: translate(0px, -1px);
+}
+
+.customAccordion {
+    background-color: none;
+    border: 0;
+    margin: 0;
+}
+
+.translate1y{
+    transform:translate(0px,-1px)
+}
+
+.card{
+    max-width:fit-content; 
+    width: fit-content;
+    min-width: 13em;
+}

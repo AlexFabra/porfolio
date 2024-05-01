@@ -1,0 +1,28 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col img-container" *ngIf="documentSelection">
+      <button *ngFor="let img of imgs; let i = index" class="btn btn-light m-2 buttonSecondary" (click)="changeSelection(i)">
+        <img src={{img}} class="d-block w-100 littleImg p-2" alt="...">
+      </button>
+    </div>
+    <div *ngIf="!documentSelection">
+      <div class="m-2 img-container">
+        <button class="btn btn-light button" type="button" (click)="openModalImg()">
+          <img src={{imgs[selection]}} class="img" alt="...">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row m-2">
+    <button mat-raised-button matBadge="{{imgs.length}}" [matBadgeHidden]="documentSelection" class="btn btn-light button"
+      (click)="openImgSelector()">
+      <span *ngIf="!documentSelection">Other docs</span>
+      <span *ngIf="documentSelection">Back</span>
+    </button>
+  </div>
+
+</div>
+
+<app-modal-img #modalImg [img]="imgs[selection]" class="customModalClass"></app-modal-img>
