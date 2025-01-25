@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { EChartsOption } from 'echarts';
-import { BarChart, LineChart, PieChart } from 'echarts/charts';
+import { Component, Input, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import * as echarts from 'echarts';
+import { ECharts, EChartsCoreOption } from 'echarts';
+import { BarChart } from 'echarts/charts';
 import { GridComponent, LegendComponent, TooltipComponent } from 'echarts/components';
 
 @Component({
@@ -8,65 +9,83 @@ import { GridComponent, LegendComponent, TooltipComponent } from 'echarts/compon
   templateUrl: './bar-chart.component.html',
   styleUrls: ['./bar-chart.component.css']
 })
-export class BarChartComponent implements OnInit {
-
-  readonly echartsExtentions: any[];
-  option: EChartsOption = {};
-  chartWidth:string='';
-  @Input() data: object[] = [];
+export class BarChartComponent implements OnInit, AfterViewInit {
+  readonly echartsExtentions: any[] = [
+    BarChart
+  ];
   
-  constructor() {
-    this.echartsExtentions = [
-      BarChart,
-      LineChart,
-      TooltipComponent,
-      GridComponent,
-      LegendComponent,
-      PieChart
-    ];
-  }
+  @Input() data: { name: string; value: number }[] = []; // Cambiado para mayor claridad
+  @ViewChild('chart') chartRef!: ElementRef; // Referencia al contenedor del gráfico
+
+  option: EChartsCoreOption = {};
+  chartWidth: string = '400px'; // Valor por defecto
+  private chartInstance!: echarts.ECharts;
+
+  constructor() {}
 
   ngOnInit(): void {
-    this.chartWidth=(this.data.length*70).toString()+'px';
+    // Calcula el ancho del gráfico dinámicamente si hay datos
+    if (this.data && this.data.length > 0) {
+      this.chartWidth = `${this.data.length * 70}px`;
+    }
+  }
+
+  ngAfterViewInit(): void {
+    // Inicializa el gráfico en el DOM completamente cargado
+    const chartDom = this.chartRef.nativeElement;
+    this.chartInstance = echarts.init(chartDom);
+
+    // Crea el gráfico
     this.createChart();
   }
 
-/** crea una gràfica tipus donut amb la informació que rep dels tags.
-   */
- async createChart() {
+  createChart() {
+    const keys = this.data.map((d) => d.name); // Extrae las claves
+    const values = this.data.map((d) => d.value); // Extrae los valores
+
     this.option = {
       xAxis: {
-        data: Array.from(this.data.keys())
+        type: 'category',
+        data: keys,
+        axisLabel: {
+          rotate: 45, // Opcional: Rotar las etiquetas para gráficos con muchos datos
+        },
       },
       yAxis: {
+        type: 'value',
       },
       series: [
         {
           type: 'bar',
-          data: Array.from(this.data.values()),
-          barCategoryGap: 30,
+          data: values,
+          barCategoryGap: '30%',
           barWidth: 20,
           label: {
-            position: [0, -14],
-            formatter: '{b}',
-            show: true
+            position: 'top',
+            show: true,
           },
           itemStyle: {
-            color: 'whitesmoke',
-              borderRadius: [0, 2, 2, 0],
+            color: ['whitesmoke'],
+            borderRadius: [0, 2, 2, 0],
           },
         },
       ],
-      legend: [
-        {
-          data: this.data
-        }
-      ],
+      legend: {
+        show: false, // Opcional: Oculta el legend si no es necesario
+      },
+      tooltip: {
+        trigger: 'axis',
+      },
     };
+
+    // Aplica la configuración al gráfico
+    this.chartInstance.setOption(this.option);
   }
 
-  getWidth(){
-    return this.chartWidth+'px';
+  // Recalcular tamaño si cambia el contenedor
+  onResize() {
+    if (this.chartInstance) {
+      this.chartInstance.resize();
+    }
   }
-
 }

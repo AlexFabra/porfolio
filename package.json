@@ -27,7 +27,7 @@
     "@types/echarts": "^4.9.22",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.3.3",
-    "echarts": "^5.5.0",
+    "echarts": "^5.6.0",
     "echarts-for-angular": "^0.4.0",
     "express": "^4.19.2",
     "express-validator": "^7.0.1",
