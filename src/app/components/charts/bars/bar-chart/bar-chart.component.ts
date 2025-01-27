@@ -13,7 +13,7 @@ export class BarChartComponent implements OnInit, AfterViewInit {
   readonly echartsExtentions: any[] = [
     BarChart
   ];
-  
+
   @Input() data: { name: string; value: number }[] = []; // Cambiado para mayor claridad
   @ViewChild('chart') chartRef!: ElementRef; // Referencia al contenedor del gráfico
 
@@ -21,7 +21,7 @@ export class BarChartComponent implements OnInit, AfterViewInit {
   chartWidth: string = '400px'; // Valor por defecto
   private chartInstance!: echarts.ECharts;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     // Calcula el ancho del gráfico dinámicamente si hay datos
@@ -33,10 +33,12 @@ export class BarChartComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // Inicializa el gráfico en el DOM completamente cargado
     const chartDom = this.chartRef.nativeElement;
-    this.chartInstance = echarts.init(chartDom);
 
-    // Crea el gráfico
-    this.createChart();
+    if (chartDom.clientWidth > 0 && chartDom.clientHeight > 0) {
+      this.chartInstance = echarts.init(chartDom);
+      this.createChart();
+    }
+
   }
 
   createChart() {

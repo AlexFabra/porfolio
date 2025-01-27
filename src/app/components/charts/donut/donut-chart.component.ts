@@ -1,10 +1,11 @@
-import { Component, Input, OnInit, Type } from '@angular/core';
-import { EChartsOption,ChartView } from 'echarts';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, Type, ViewChild } from '@angular/core';
+import { EChartsOption, ChartView } from 'echarts';
 import { BarChart, LineChart, PieChart, PieSeriesOption } from "echarts/charts";
 import { TooltipComponent, GridComponent, LegendComponent } from "echarts/components";
+import * as echarts from 'echarts';
 
-interface donut { name:any, value:number}
-interface bar {data: number }
+interface donut { name: any, value: number }
+interface bar { data: number }
 
 @Component({
   selector: 'app-donut-chart',
@@ -12,33 +13,34 @@ interface bar {data: number }
   styleUrls: ['./donut-chart.component.css']
 })
 
-export class DonutChartComponent implements OnInit {
+export class DonutChartComponent implements AfterViewInit {
 
   readonly echartsExtentions: any[];
   option: EChartsOption = {};
+  @ViewChild('chart') chartRef!: ElementRef; // Referencia al contenedor del gráfico
+  @Input() data: any = []
+  private chartInstance!: echarts.ECharts;
+  chartWidth: string = '400px'; // Valor por defecto
 
-  @Input() data:any = []
-  
   constructor() {
     this.echartsExtentions = [
-      BarChart,
-      LineChart,
-      TooltipComponent,
-      GridComponent,
-      LegendComponent,
       PieChart
     ];
-   }
-
-  ngOnInit(): void {
-    this.createChart();
   }
 
-/** crea una gràfica tipus donut amb la informació que rep dels tags.
-   */
- async createChart() {
+  ngAfterViewInit(): void {
+    const chartDom = this.chartRef.nativeElement;
+    if (chartDom.clientWidth > 0 && chartDom.clientHeight > 0) {
+      this.chartInstance = echarts.init(chartDom);
+      this.createChart();
+    }
+  }
+
+  /** crea una gràfica tipus donut amb la informació que rep dels tags.
+     */
+  async createChart() {
     //configuració del chart:
-    this.option= {
+    this.option = {
       series: [
         {
           type: 'pie',
@@ -71,7 +73,9 @@ export class DonutChartComponent implements OnInit {
         }
       ],
     }
-}
+    // Aplica la configuración al gráfico
+    this.chartInstance.setOption(this.option);
+  }
 
 
 }
