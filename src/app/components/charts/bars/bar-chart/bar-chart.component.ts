@@ -67,7 +67,7 @@ export class BarChartComponent implements OnInit, AfterViewInit {
             show: true,
           },
           itemStyle: {
-            color: ['whitesmoke'],
+            color: ['black'],
             borderRadius: [0, 2, 2, 0],
           },
         },

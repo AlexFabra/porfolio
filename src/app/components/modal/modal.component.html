@@ -4,16 +4,16 @@
     <h2>{{ title }}</h2>
     <button class="close-button" (click)="closeModal()"><mat-icon class="black">close</mat-icon></button>
   </div>
-  <div class="modal-body">
-    <img *ngIf="image" [src]="image" alt="{{ title }}" class="modal-image">
-    <h4 *ngIf="subtitle">{{ subtitle }}</h4>
+  <div class="modal-body text-center">
+    <img *ngIf="image" [src]="image" alt="{{ title }}" class="modal-image m-auto mb-4">
+    <h4 *ngIf="subtitle" [innerHTML]="subtitle"></h4>
     <!-- <p *ngIf="summary">{{ summary }}</p> -->
     <div *ngIf="summary" [innerHTML]="summary"></div>
     <div *ngIf="content" [innerHTML]="content"></div>
   </div>
-  <div class="modal-footer">
+  <div class="modal-footer mt-5">
     <a *ngIf="url" [href]="url" target="_blank">
-      <button class="btn btn-primary">Learn More</button>
+      <button class="btn btn-primary">More information</button>
     </a>
     <!-- <button class="btn btn-secondary" (click)="closeModal()">Close</button> -->
   </div>

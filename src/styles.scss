@@ -4,8 +4,8 @@
 html,
 body {
     height: 100%;
-  
-    background-color: #ace9a0;
+    
+    background-color: #D3F1DF !important;
 }
 
 body {
@@ -14,32 +14,24 @@ body {
 }
 
 .backgroundPrimary {
-    background-color: #93b984 !important;
+    background-color: #D3F1DF !important;
     /* #393939 */
     /* #D8D8D8; */
 }
 
 .cardBackground {
-    background-color:  #567e47 !important;
+    // background-color: #567e47 !important;
+    
+    background-color: #6b9b79 !important;
+    color:white;
     /* #ffeeb7 */
     /* #ffd153; */
     /* #ffb48e; */
 }
 
 .cardBackgroundSecondary {
-    background-color: #c6f3b0 !important;
+    background-color: #85A98F !important;
     /* #DAF7A6; */
-}
-
-.ah-button-active {
-    background-color: #6baa38;
-    border-color:#3a7c3d;
-    color:white;
-}
-.button:hover{
-    background-color: #5da342;
-    border-color:#62a839;
-    color:white;
 }
 
 .dateViewer {
@@ -63,6 +55,21 @@ body {
 }
 
 .scrollableContainer {
-    overflow: auto; 
+    overflow: auto;
     max-height: 150px;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #9acfa9 !important;
+    color: white !important;
+    border-color: #5ca15f !important;
+}
+
+.btn-primary {
+    color: white !important;
+    background-color: #85A98F !important;
+    border-color: #5ca15f !important;
 }
