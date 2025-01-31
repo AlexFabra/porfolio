@@ -41,8 +41,7 @@ export class ProjectsComponent implements OnInit {
       image: './../../../assets/imgs/logo-nexus.png',
       summary: '',
       content: 'Creation of a web application to view and manage employee vacations. The application was first developed in Angular and then in React.',
-      isVisible: true,
-      url: 'https://github.com/AlexFabra/calendar-mood'
+      isVisible: true
     },
     {
       title: 'Calendar Mood (team member)',
