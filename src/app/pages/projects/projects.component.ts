@@ -38,7 +38,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Calendar PCP (team member at Nexus Geographics)',
       subtitle: `2023 <br> Angular and React`,
-      image: './../../../assets/imgs/logo-nexus.png',
+      image: 'assets/imgs/logo-nexus.png',
       summary: '',
       content: 'Creation of a web application to view and manage employee vacations. The application was first developed in Angular and then in React.',
       isVisible: true
@@ -63,7 +63,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Uniqueids (team member at Zertifier)',
       subtitle: `(Web project) 2022-2023 <br> Express-Sql-Solidity`,
-      image: './../../../assets/imgs/logo-zertifier.png',
+      image: 'assets/imgs/logo-zertifier.png',
       summary: '',
       content: 'In this project, NFTS and NFCS are linked to identify and improve product traceability. My task was to design and develop a database, a backend and an administrative panel on the web, as well as various Smart Contracts in Solidity.',
       isVisible: true,
@@ -72,7 +72,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Zerticarbon (team member at Zertifier)',
       subtitle: `(Web project) 2023 <br> Vue`,
-      image: './../../../assets/imgs/logo_zerticarbon.png',
+      image: 'assets/imgs/logo_zerticarbon.png',
       summary: '',
       content: 'Zerticarbon is a project that sells the CO2 absorbed by trees. Absorption is calculated from physical data and the CO2 is tokenized. My task was to automate this tokenization through the processing of various files where the information is stored.',
       isVisible: true,
@@ -81,7 +81,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Megasite (team member at Zertifier)',
       subtitle: `(Web project) 2023 <br> Php-sql`,
-      image: './../../../assets/imgs/logo-megatro.png',
+      image: 'assets/imgs/logo-megatro.png',
       summary: '',
       content: 'Megasite is a web application that creates web pages. My task was to update it.',
       isVisible: true,
@@ -90,7 +90,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Ecologización',
       subtitle: `(Web project) 2023-2024 <br> Html-Javascript`,
-      image: './../../../assets/imgs/ecologizacion-logo.png',
+      image: 'assets/imgs/ecologizacion-logo.png',
       summary: '',
       content: 'This project aims to create articles and a repository of news classified by environmental themes.',
       isVisible: true,
@@ -99,7 +99,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: `Emergència climàtica Pla de l'Estany`,
       subtitle: `(Web project) 2024 <br> Angular-Node-Express-Mysql2-Sql`,
-      image: './../../../assets/imgs/emergencia-climatica-pde.png',
+      image: 'assets/imgs/emergencia-climatica-pde.png',
       summary: '',
       content: 'Self-authentication; dynamically created pages and modals: content creation panel; contact service; editable calendar.',
       isVisible: true,
@@ -108,7 +108,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: `Zertipower (team member at Zertifier)`,
       subtitle: `(Web project) 2023-2024 <br> Angular-Nest-Prisma-Sql-Solidity`,
-      image: './../../../assets/imgs/zertipower-logo-black.png',
+      image: 'assets/imgs/zertipower-logo-black.png',
       summary: `<a href="https://www.zertipower.com/">Official project information</a>`,
       content: 'This project aims to facilitate energy management in energy communities by tokenizing it. I have participated in the creation of Smart Contracts, in the creation of the client panel, in the creation of the administrator control panel and in the app to calculate the capacity of a house to include solar panels and the simulation of its entry into an energy community. I have mainly been responsible for the backend and the web application. I have touched on authentication mechanisms, maps, methods to obtain the land registries. I have created algorithms for energy distribution.',
       isVisible: true,
@@ -117,7 +117,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: `Pocimarvm`,
       subtitle: `(Web project) 2024-2025 <br> Angular`,
-      image: './../../../assets/imgs/pocimarum-logo.png',
+      image: 'assets/imgs/pocimarum-logo.png',
       summary: ``,
       content: 'Application to facilitate the creation and editing of letters, as well as creating printable documents.',
       isVisible: true
